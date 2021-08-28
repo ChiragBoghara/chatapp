@@ -31,14 +31,11 @@ a {
 
 .btn {
   cursor: pointer;
-  /* padding: 5px 15px; */
   padding: 10px 20px;
   background: var(--light-color);
   color: var(--dark-color-a);
   border: 0;
   font-size: 17px;
-  /* margin-right: 5px;
-  margin-left: 5px; */
 }
 
 .btnSend {
@@ -59,7 +56,7 @@ a {
   max-width: 1100px;
   background: #fff;
   margin: 30px auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .chat-header {
@@ -67,15 +64,20 @@ a {
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.chat-header p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .chat-main {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2.5fr;
 }
 
 .chat-sidebar {
@@ -83,6 +85,13 @@ a {
   color: #fff;
   padding: 20px 20px 60px;
   overflow-y: scroll;
+}
+
+.chat-sidebar .close-sidebar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .chat-sidebar h2 {
@@ -167,10 +176,6 @@ a {
   background: var(--dark-color-b);
 }
 
-.join-main p {
-  margin-bottom: 20px;
-}
-
 .join-main .form-control {
   margin-bottom: 20px;
 }
@@ -187,13 +192,6 @@ a {
   width: 100%;
 }
 
-.join-main select {
-  font-size: 16px;
-  padding: 5px;
-  height: 40px;
-  width: 100%;
-}
-
 .join-main .btn {
   margin-top: 20px;
   width: 100%;
@@ -201,10 +199,44 @@ a {
 
 @media (max-width: 700px) {
   .chat-main {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
-  .chat-sidebar {
+  /* .chat-sidebar {
     display: none;
+  } */
+
+  body {
+    margin: 0;
+  }
+
+  .chat-header p {
+    font-size: 1.3rem;
+  }
+
+  .chat-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnSend {
+    cursor: pointer;
+    padding: 5px 15px;
+    padding: 10px 20px;
+    background: var(--light-color);
+    color: var(--dark-color-a);
+    border: 0;
+    font-size: 17px;
+    margin: 8px auto;
+    width: 100%;
+  }
+
+  .chat-form-container input[type="text"] {
+    font-size: 16px;
+    padding: 5px;
+    height: 45px;
+    flex: 1;
+    margin-bottom: 5px;
   }
 }

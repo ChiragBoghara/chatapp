@@ -8,7 +8,6 @@ const sendLocationButton = document.querySelector("#send-location");
 const roomName = document.getElementById("room-name");
 const userList = document.getElementById("users");
 const leaveBtn = document.getElementById("leave-btn");
-
 const messages = document.querySelector("#messages");
 
 //templates
@@ -130,8 +129,6 @@ function outputUsers(users) {
       finalHTML = finalHTML + `<li>${user.username}</li>`;
     })
     .join();
-
-  console.log(finalHTML);
 
   userList.innerHTML = finalHTML;
 }
